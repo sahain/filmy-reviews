@@ -1,0 +1,5 @@
+<% flash.each do |key, value| %>
+	<div data-alert class="alert-box">
+	  <%= content_tag(:p, value, :class => "flash #{key}") %>
+	</div>
+<% end %>

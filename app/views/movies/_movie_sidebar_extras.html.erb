@@ -1,0 +1,24 @@
+
+    <% if @fans.any? %>
+      <h3>Fans</h3>
+      <% @fans.each do |user| %>
+        <li>
+          <%= link_to user.name, user %>
+        </li>
+      <% end %>
+    <% end %>
+
+    <% if @critics.any? %>
+      <h3>Critics</h3>
+      <% @critics.each do |user| %>
+        <li>
+          <%= link_to user.name, user %>
+        </li>
+      <% end %>
+    <% end %>
+
+    <h3>Genres</h3>
+      <% @genres.each do |genre| %>
+        <li><%= genre.name %></li>
+      <% end %>
+

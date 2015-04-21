@@ -1,0 +1,12 @@
+<aside id="sidebar">
+  <nav>
+    <ul class="side-nav">
+      <% if current_user_admin? %>
+        <li class="create-movie">
+          <%= link_to 'Add New Movie', new_movie_path, class: 'button' %>
+        </li>
+      <% end %>
+      <%= content_for(:side) %>
+    </ul>
+  </nav>
+</aside>

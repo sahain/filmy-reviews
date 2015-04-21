@@ -1,0 +1,28 @@
+<header id="page-header">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to 'Flix', root_path %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <% if current_user %>
+            <li><%= link_to current_user.name, current_user %></li> | 
+            <li><%= link_to "Account Settings", edit_user_path(current_user) %></li>
+            <li><%= link_to "Sign Out", session_path, method: :delete, class: 'button' %></li>
+
+
+          <% else %>
+            <ul class="button-group">
+              <li><%= link_to 'Sign Up', signup_path, class: 'button' %></li>
+              <li><%= link_to 'Sign In', new_session_path, class: 'button' %></li>
+            </ul>
+          <% end %>
+        </ul>
+    </section>
+    </ul>
+  </nav>
+</header>

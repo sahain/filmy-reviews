@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= page_title %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= render "layouts/header" %>
+
+<div id="wrapper">
+  
+  <%= render "layouts/flashes" %>
+  
+  <div id="container">
+    <div class="row">
+        <div class="large-3 push-9 columns">
+          <%= render "layouts/sidebar" %>
+        </div>
+        <div class="large-9 pull-3 columns">
+          <section id="content">
+            <%= yield %>
+          </section>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+<%= render "layouts/footer" %>
+
+  </body>
+</html>
