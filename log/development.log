@@ -26360,3 +26360,26 @@ ActionView::Template::Error (undefined method `image_for' for #<#<Class:0x000000
   Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
   Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2015-04-22 15:50:05 -0700
+Processing by MoviesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/_form.html.erb (69.0ms)
+  Rendered movies/new.html.erb within layouts/application (69.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 103ms (Views: 96.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-22 15:50:06 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-22 15:50:06 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-22 15:50:06 -0700
