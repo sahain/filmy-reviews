@@ -6,6 +6,13 @@ class Movie < ActiveRecord::Base
   has_many :characterizations, dependent: :destroy
   has_many :genres, through: :characterizations
 
+  has_attached_file :image, styles: { 
+    medium: "90x133",
+    thumb: "50x50"
+  },
+    default_url: "placeholder.png"
+
+
   validates :title, presence: true
   
   validates :released_on, :duration, presence: true
@@ -22,6 +29,10 @@ class Movie < ActiveRecord::Base
   RATINGS = %w(G PG PG-13 R NC-17)
 
   validates :rating, inclusion: { in: RATINGS }
+
+  validates_attachment :image,
+  :content_type => { :content_type => ['image/jpeg', 'image/png'] },
+  :size => { :less_than => 1.megabyte }
 
   scope :released, -> { where("released_on <= ?", Time.now).order(released_on: :desc) }
   scope :hits, -> { released.where('total_gross >= 300000000').order(total_gross: :desc) }

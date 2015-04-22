@@ -44,6 +44,9 @@ gem 'bcrypt-ruby', '3.1.2'
 
 gem 'foundation-rails'
 
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
