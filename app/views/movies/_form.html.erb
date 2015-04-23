@@ -1,7 +1,7 @@
-<%= form_for(@movie) do |f| %>
+<%= form_for(@movie, multipart: true) do |f| %>
   <%= render "shared/errors", object: @movie %>
   <fieldset>
-    <ol>
+    <ul>
       <li class="required">
         <%= f.label :title %>
         <%= f.text_field :title, autofocus: true %>
@@ -44,9 +44,9 @@
       <li>
         <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name,) %>
       </li>
-    </ol>
+    </ul>
     <p>
-      <%= f.submit %>
+      <%= f.submit nil, class: 'button' %>
       <%= link_to "Cancel", movies_path, class: 'button' %>
     </p>
   </fieldset>

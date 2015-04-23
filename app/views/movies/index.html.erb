@@ -11,7 +11,7 @@
     <li>
       <article class="movie panel" id="<%= dom_id(movie) %>">
         <header>
-          <%= image_tag movie.image.url(:thumb) %>
+          <%= image_tag movie.image.url(:medium) %>
           <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>
           <h3><%= movie.cast %></h3>
         </header>

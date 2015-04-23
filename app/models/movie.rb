@@ -7,8 +7,9 @@ class Movie < ActiveRecord::Base
   has_many :genres, through: :characterizations
 
   has_attached_file :image, styles: { 
-    medium: "90x133",
-    thumb: "50x50"
+    large: "200x300",
+    medium: "120x200",
+    thumb: "80x80"
   },
     default_url: "placeholder.png"
 
