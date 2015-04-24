@@ -1,7 +1,7 @@
 <% content_for(:title, @movie.title) %>
 <article id="movie" class="movie">
   <header>
-    <%= image_tag @movie.image.url(:medium) %>
+    <%= image_tag @movie.image.url(:large) %>
     <h1><%= @movie.title %></h1>
     <h2>Released: <%= @movie.released_on %></h2>
   </header>
