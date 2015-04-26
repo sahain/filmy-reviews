@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  has_many :reviews, dependent: :destroy
+  has_many :reviews, -> { order(created_at: :desc) }, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :fans, through: :favorites, source: :user
   has_many :critics, through: :reviews, source: :user
@@ -14,7 +14,8 @@ class Movie < ActiveRecord::Base
     default_url: "placeholder.png"
 
 
-  validates :title, presence: true
+  validates :title, presence: true, uniqueness: true
+  validates :slug, uniqueness: true
   
   validates :released_on, :duration, presence: true
   
@@ -36,6 +37,11 @@ class Movie < ActiveRecord::Base
   scope :upcoming, -> {  where("released_on > ?", Time.now).order(released_on: :asc) }
   scope :rated, ->(rating) { released.where(rating: rating) }
   scope :recent, ->(max=5) { released.limit(max) }
+  scope :past_n_days, ->(days) { where('created_at >= ?' , days.days.ago) }
+  scope :grossed_less_than, ->(amount) { released.where('total_gross < ?', amount) }
+  scope :grossed_greater_than, ->(amount) { released.where('total_gross > ?', amount) }
+
+  before_validation :generate_slug
 
   def flop?
     total_gross.blank? || total_gross < 50000000
@@ -43,5 +49,13 @@ class Movie < ActiveRecord::Base
   
   def average_stars
     reviews.average(:stars)
+  end
+
+  def to_param
+    slug
+  end
+
+  def generate_slug
+    self.slug ||= title.parameterize if title
   end
 end

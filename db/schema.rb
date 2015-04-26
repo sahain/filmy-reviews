@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422210449) do
+ActiveRecord::Schema.define(version: 20150425211516) do
 
   create_table "characterizations", force: :cascade do |t|
     t.integer  "movie_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150422210449) do
     t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20150422210449) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "slug"
   end
 
   create_table "reviews", force: :cascade do |t|

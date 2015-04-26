@@ -37,4 +37,10 @@
       </article>
     </li>
   <% end %>
+  <% content_for :side do %>
+    <h3>Genres</h3>
+    <% @genres.each do |genre| %>
+      <li><%= link_to genre.name, genre %></li>
+    <% end %>
+  <% end %>
 </ul>

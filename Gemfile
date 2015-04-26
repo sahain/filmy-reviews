@@ -47,6 +47,8 @@ gem 'foundation-rails'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk'
 
+gem 'faker'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

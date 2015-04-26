@@ -1,0 +1,10 @@
+<% if @genre.movies.any? %>
+	<h1>Movies in <%= @genre.name %> Genre</h1>
+	<ul>
+		<% @genre.movies.each do |movie| %>
+			<li><%= link_to movie.title, movie %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<h3>No Movies in <%= @genre.name %> Genre</h3>
+<% end %>

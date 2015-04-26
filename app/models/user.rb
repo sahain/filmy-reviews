@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  before_save :format_email
+
   has_many :reviews, -> { order(created_at: :desc) }, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :favorite_movies, through: :favorites, source: :movie
@@ -9,14 +11,12 @@ class User < ActiveRecord::Base
   validates :email, presence: true,
             format: /\A\S+@\S+\z/,
             uniqueness: { case_sensitive: false }
-  validates :password, length: { minimum: 10, allow_blank: true }
+  validates :password, length: { minimum: 8, allow_blank: true }
 
   scope :by_name, -> { order(:name) }
-  # scope :not_admins, -> { by_name.where(admin: false) }
-  scope :past_n_days, ->(days) { where('created_at >= ?' , days.days.ago) }
-  scope :grossed_less_than, ->(amount) { released.where('total_gross < ?', amount) }
-  scope :grossed_greater_than, ->(amount) { released.where('total_gross > ?', amount) }
+  scope :not_admins, -> { by_name.where(admin: false) }
 
+  
   def self.authenticate(email, password)
     user = User.find_by(email: email)
     user && user.authenticate(password)
@@ -24,5 +24,9 @@ class User < ActiveRecord::Base
                       
   def gravatar_id
     Digest::MD5::hexdigest(email.downcase)
+  end
+
+  def format_email
+    self.email = email.downcase
   end
 end
