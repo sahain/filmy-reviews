@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
       @movies = Movie.upcoming
     when 'recent'
       @movies = Movie.recent
+    when 'classics'
+      @movies = Movie.classics
     else
       @movies = Movie.released
     end

@@ -47262,3 +47262,48 @@ Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-2
 
 
 Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:35:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 10:45:43 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:45:44.052305')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (47.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (18.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 96.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:45:44 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:45:44 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:45:44 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:45:45 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '1965-04-26 17:45:45.448954')[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (20.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 131.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:45:45 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:45:45 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:45:45 -0700
