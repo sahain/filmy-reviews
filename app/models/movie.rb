@@ -40,6 +40,7 @@ class Movie < ActiveRecord::Base
   scope :past_n_days, ->(days) { where('created_at >= ?' , days.days.ago) }
   scope :grossed_less_than, ->(amount) { released.where('total_gross < ?', amount) }
   scope :grossed_greater_than, ->(amount) { released.where('total_gross > ?', amount) }
+  scope :classics, -> { where("released_on <= ?", DateTime.now - 50.years) }
 
   before_validation :generate_slug
 

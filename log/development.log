@@ -45414,3 +45414,1851 @@ Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-2
 
 
 Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-25 23:21:16 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 08:40:32 -0700
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:40:32.755722')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (51.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (23.0ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 103.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:40:32 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:40:32 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:40:33 -0700
+
+
+Started GET "/movies/filter/flops" for 127.0.0.1 at 2015-04-26 08:47:10 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"flops"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:47:10.324488') AND (total_gross < 50000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" ASC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (161.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 195ms (Views: 190.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:47:10 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:47:10 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:47:10 -0700
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-04-26 08:47:17 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:47:17.869036') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:47:17 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:47:17 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:47:20 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 08:53:33 -0700
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:53:34.052745')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (53.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (22.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 247ms (Views: 106.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:53:34 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:53:34 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:53:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 08:55:26 -0700
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:55:26.352594')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (51.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (21.9ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 241ms (Views: 102.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:55:26 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:55:26 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:55:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 08:55:29 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:55:29.547125')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (27.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:55:29 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:55:29 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:55:29 -0700
+
+
+Started GET "/movies/filter/flops" for 127.0.0.1 at 2015-04-26 08:55:35 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"flops"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:55:35.076546') AND (total_gross < 50000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" ASC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (26.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 176ms (Views: 173.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:55:35 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:55:35 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:55:35 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 08:55:53 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:55:53.497589')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (29.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:55:53 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:55:53 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:55:53 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 08:55:54 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:55:54.871013')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (30.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:55:54 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:55:55 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:55:55 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 08:56:48 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:56:48.582224')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (51.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (22.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 102.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:56:48 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:56:48 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:56:48 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 08:56:50 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 15:56:50.114319')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (31.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 175ms (Views: 171.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 08:56:50 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 08:56:50 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 08:56:50 -0700
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (1.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on > '1965-04-26 16:00:01.291887')
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:00:47 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:00:47.402390')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (52.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (139.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 250ms (Views: 218.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:00:47 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:00:47 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:00:47 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:00:49 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:00:49.507019')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (32.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 66.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:00:49 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:00:49 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:00:49 -0700
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on < '1965-04-26 16:01:04.121630')[0m
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:01:38 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:01:38.195003')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (28.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:01:38 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:01:38 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:01:38 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:01:40 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:01:40.066785')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (26.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 182.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:01:40 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:01:40 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:01:40 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:02:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:02:03.227985')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (371.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (39.2ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 602ms (Views: 553.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:02:03 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:02:03 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:02:04 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:02:04 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:02:04.822394')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (30.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:02:04 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:02:04 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:02:05 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:04:05 -0700
+
+SyntaxError (/home/sam/rails_studio/flix/app/helpers/movies_helper.rb:18: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/helpers/movies_helper.rb:18: syntax error, unexpected keyword_end, expecting end-of-input
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/movies_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/sam/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.3ms)
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:04:18 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:04:18.545033')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (661.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (22.8ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 746ms (Views: 715.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:04:19 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:04:19 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:04:19 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:04:28 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:04:28.960470')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (36.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:04:29 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:04:29 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:04:29 -0700
+
+
+Started GET "/movies/filter/upcoming" for 127.0.0.1 at 2015-04-26 09:09:44 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"upcoming"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on > '2015-04-26 16:09:44.942064')  ORDER BY "movies"."released_on" ASC
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 32.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:09:45 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:09:45 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 09:09:47 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:09:47.137249')  ORDER BY "movies"."released_on" DESC LIMIT 5[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (26.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 151ms (Views: 147.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:09:47 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:09:47 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:09:47 -0700
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-04-26 09:09:48 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:09:48.484191') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:09:48 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:09:48 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:09:49 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:09:49.608462')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (32.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:09:49 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:09:49 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:09:49 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:12:11 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:12:12.117944')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (59.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (24.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 118.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:12:12 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:12:12 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:12:12 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:12:14 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:12:14.045606')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (31.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 157ms (Views: 153.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:12:14 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:12:14 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:12:14 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:17:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:17:07.692893')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (959.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (38.3ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1176ms (Views: 1130.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:17:08 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:17:08 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:17:09 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:17:11 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:17:11.858733')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (33.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:17:11 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:17:11 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:17:12 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:17:38 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:17:38.274166')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (57.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (23.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 233ms (Views: 203.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:17:38 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:17:38 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:17:38 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:17:41 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:17:41.961468')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (31.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:17:42 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:17:42 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:17:42 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:17:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:17:59.488725')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (960.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (38.3ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1173ms (Views: 1130.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:18:00 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:18:00 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:18:00 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:18:03 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:18:03.411377')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (33.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:18:03 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:18:03 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:18:03 -0700
+
+
+Started GET "/movies/filter/upcoming" for 127.0.0.1 at 2015-04-26 09:19:39 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"upcoming"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on > '2015-04-26 16:19:39.513794')  ORDER BY "movies"."released_on" ASC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (6.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:19:39 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:19:39 -0700
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-04-26 09:19:41 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:19:41.280357') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC[0m
+  [1m[35mGenre Load (0.4ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:19:41 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:19:41 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:19:42 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:19:42.558286')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (32.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 158ms (Views: 155.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:19:42 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:19:42 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:19:42 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:21:01 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:21:01.332925')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (34.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:21:01 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:21:01 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:21:01 -0700
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on >= '1965-04-26 16:25:19.102028')
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:25:37.876333') AND (released_on <='1970-01-01')  ORDER BY "movies"."released_on" DESC[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 09:26:18 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:26:18.768555')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (30.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 58.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:26:18 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:26:18 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:26:18 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:26:20 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:26:20.670848')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (31.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 159ms (Views: 155.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:26:20 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:26:20 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:26:21 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 09:26:23 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:26:23.655789')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (32.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:26:23 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:26:23 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:26:23 -0700
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <='1970-01-01')
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 09:27:33 -0700
+Processing by MoviesController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:27:33.650103')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (150.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (22.9ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 232ms (Views: 203.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:27:33 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:27:33 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:27:34 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:27:36 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:27:36.351578')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (32.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:27:36 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:27:36 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:27:36 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:28:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:28:07.605369')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (962.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (39.1ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1178ms (Views: 1133.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:28:08 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:28:08 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:28:09 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:28:10 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:28:10.787768')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (33.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:28:10 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:28:10 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:28:11 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:38:06 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:38:06.251844')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (31.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:38:06 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:38:06 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:38:06 -0700
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (created_at >= '-0723-05-29 16:57:24.349171')[0m
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <='1965-04-26 16:59:36.204156')
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:59:52 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:59:52.313413')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (55.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (23.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 109.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:59:52 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:59:52 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:59:52 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 09:59:53 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 16:59:53.546806')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (31.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 142.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 09:59:53 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 09:59:53 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 09:59:53 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:00:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:00:09.941923')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (964.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (40.2ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 1185ms (Views: 1140.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:00:11 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:00:11 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:00:11 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 10:05:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:05:28.336949')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (968.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (38.5ms)
+  Rendered layouts/_flashes.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1180ms (Views: 1135.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:05:29 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:05:29 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:05:29 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 10:12:02 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:12:02.808426')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (57.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (115.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 238ms (Views: 201.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:12:03 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:12:03 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:12:03 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:12:04 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:12:04.057956')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (36.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:12:04 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:12:04 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:12:04 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:12:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:12:17.995740')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (959.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (41.2ms)
+  Rendered layouts/_flashes.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1178ms (Views: 1133.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:12:19 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:12:19 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:12:19 -0700
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '1965-04-26 17:15:00.964984')[0m
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:15:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:15:29.917361')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (956.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (38.7ms)
+  Rendered layouts/_flashes.html.erb (0.6ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 1169ms (Views: 1125.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:15:31 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:15:31 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:15:31 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:15:34 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:15:34.269076')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (34.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:15:34 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:15:34 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:15:34 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-26 10:15:42 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:15:42.409020')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (34.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 63.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:15:42 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:15:42 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:15:42 -0700
+
+
+Started GET "/movies/filter/upcoming" for 127.0.0.1 at 2015-04-26 10:16:03 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"upcoming"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on > '2015-04-26 17:16:03.220505')  ORDER BY "movies"."released_on" ASC[0m
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:16:03 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:16:03 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:16:05 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:16:05.138560')  ORDER BY "movies"."released_on" DESC LIMIT 5
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (122.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 156ms (Views: 153.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:16:05 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:16:05 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:16:05 -0700
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-04-26 10:16:05 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:16:05.972549') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC[0m
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:16:06 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:16:06 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:16:07 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:16:07.443109')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (32.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_flashes.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:16:07 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:16:07 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:16:07 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:16:08 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:16:08.311390')  ORDER BY "movies"."released_on" DESC LIMIT 5[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (27.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 144ms (Views: 141.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:16:08 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:16:08 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:16:08 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:20:46 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:20:46.146054')  ORDER BY "movies"."released_on" DESC LIMIT 5
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (26.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:20:46 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:20:46 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:20:46 -0700
+
+
+Started GET "/movies/filter/upcoming" for 127.0.0.1 at 2015-04-26 10:20:48 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"upcoming"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on > '2015-04-26 17:20:48.256979')  ORDER BY "movies"."released_on" ASC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:20:48 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:20:48 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-26 10:20:49 -0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:20:49.452045')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (29.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 135.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:20:49 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:20:49 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:20:49 -0700
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-04-26 10:20:50 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:20:50.736847') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:20:50 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:20:50 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:20:52 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:20:52.446128')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (28.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:20:52 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:20:52 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:20:52 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:20:53 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:20:53.556274')  ORDER BY "movies"."released_on" DESC LIMIT 5[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (24.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:20:53 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:20:53 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:20:53 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:21:39 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:21:39.260834')  ORDER BY "movies"."released_on" DESC LIMIT 5
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (27.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:39 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:39 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:21:39 -0700
+
+
+Started GET "/movies/filter/hits" for 127.0.0.1 at 2015-04-26 10:21:46 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"hits"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:21:46.928691') AND (total_gross >= 300000000)  ORDER BY "movies"."released_on" DESC, "movies"."total_gross" DESC[0m
+  [1m[35mGenre Load (0.2ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:47 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:47 -0700
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:21:47 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:21:47.836233')  ORDER BY "movies"."released_on" DESC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (27.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:47 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:47 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:21:48 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:21:49 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[36mMovie Load (2.8ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:21:49.074492')  ORDER BY "movies"."released_on" DESC LIMIT 5[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (110.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 142ms (Views: 136.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:49 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:49 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:21:49 -0700
+
+
+Started GET "/movies/filter/upcoming" for 127.0.0.1 at 2015-04-26 10:21:50 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"upcoming"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on > '2015-04-26 17:21:50.091487')  ORDER BY "movies"."released_on" ASC
+  [1m[36mGenre Load (0.3ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:50 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:50 -0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-04-26 10:21:50 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:21:50.901685')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (27.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:51 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:51 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:21:51 -0700
+
+
+Started GET "/movies/filter/recent" for 127.0.0.1 at 2015-04-26 10:21:51 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"recent"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:21:51.759448')  ORDER BY "movies"."released_on" DESC LIMIT 5
+  [1m[36mGenre Load (0.4ms)[0m  [1mSELECT "genres".* FROM "genres"[0m
+  Rendered movies/index.html.erb within layouts/application (24.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 136.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:21:51 -0700
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:21:51 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:21:52 -0700
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Movie> at /home/sam/rails_studio/flix/app/models/movie.rb:9)
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" WHERE (released_on <= '1965-04-26 17:31:56.938202')
+
+
+Started GET "/movies/filter/classics" for 127.0.0.1 at 2015-04-26 10:33:10 -0700
+Processing by MoviesController#index as HTML
+  Parameters: {"scope"=>"classics"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:33:10.498823')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (34.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:33:10 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:33:10 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:33:10 -0700
+
+
+Started GET "/movies/walk-like-a-man" for 127.0.0.1 at 2015-04-26 10:35:28 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"walk-like-a-man"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."slug" = ? LIMIT 1  [["slug", "walk-like-a-man"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFavorite Load (0.3ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."movie_id" = ? LIMIT 1  [["user_id", 1], ["movie_id", 5]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."user_id" WHERE "reviews"."movie_id" = ?  [["movie_id", 5]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ? LIMIT 1[0m  [["movie_id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."user_id" WHERE "favorites"."movie_id" = ?  [["movie_id", 5]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."user_id" WHERE "reviews"."movie_id" = ? LIMIT 1[0m  [["movie_id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "reviews" ON "users"."id" = "reviews"."user_id" WHERE "reviews"."movie_id" = ?  ORDER BY "reviews"."created_at" DESC  [["movie_id", 5]]
+  [1m[36mGenre Load (0.2ms)[0m  [1mSELECT "genres".* FROM "genres" INNER JOIN "characterizations" ON "genres"."id" = "characterizations"."genre_id" WHERE "characterizations"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendered movies/_movie_sidebar_extras.html.erb (13.1ms)
+  [1m[35m (0.3ms)[0m  SELECT AVG("reviews"."stars") FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT AVG("reviews"."stars") FROM "reviews" WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 5]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."movie_id" = ?  [["movie_id", 5]]
+  Rendered movies/show.html.erb within layouts/application (35.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 186ms (Views: 59.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:35:28 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:35:29 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:35:29 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2015-04-26 10:35:34 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (released_on <= '2015-04-26 17:35:34.599601')  ORDER BY "movies"."released_on" DESC[0m
+  [1m[35mGenre Load (0.3ms)[0m  SELECT "genres".* FROM "genres"
+  Rendered movies/index.html.erb within layouts/application (29.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_flashes.html.erb (0.1ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2015-04-26 10:35:34 -0700
+
+
+Started GET "/assets/vendor/modernizr.self.js?body=1" for 127.0.0.1 at 2015-04-26 10:35:34 -0700
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2015-04-26 10:35:34 -0700
